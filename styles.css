@@ -1,0 +1,593 @@
+/*basic styles*/
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+/*body*/
+body {
+   width: 100%;
+   background: #0c111b;
+   position: relative;
+   font-family: roboto, sans-serif;
+}
+/*navbar*/
+.navbar {
+   width: 100%;
+   height: 80px;
+   position: relative;
+   top: 0;
+   left: 0;
+   padding: 10px 2%;
+   background: #141b29;
+   z-index: 9;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+  }
+/*logo*/
+.brand-logo {
+   height: 50px;
+   margin-right: 10px; 
+   position: absolute; 
+   left: 10px; 
+   top: 10px; 
+   z-index: 1000; 
+   }
+/*navbar links*/
+.nav-links {
+   margin-top: 10px;
+   margin-left: auto;
+   padding: 20px 20px;
+   display: flex;
+   list-style: none;
+   display: flex;
+   justify-content: center;
+   width: 100%;
+   flex:1 
+  }
+
+.nav-items a {
+   text-decoration: none;
+   margin-left: 0 20px;
+   text-transform: capitalize;
+   color: #fff;
+   opacity: 0.9;
+   padding: 20px 20px;
+  }
+/*logo,sub-btn*/
+.left-container {
+   display: flex;
+   flex-direction: column; /* Aligns logo and subscribe button vertically */
+   align-items: flex-start;
+}
+/*login,hamburger-icon*/
+.right-container {
+   display: block;
+   margin-left: auto;
+   position: absolute;
+}
+/*hamburger-icon*/
+.container {
+   display: inline-block;
+   cursor: pointer;
+ }
+/*ham-icon-bars styling*/ 
+ .bar1, .bar2, .bar3 {
+   width: 35px;
+   height: 5px;
+   background-color: white;
+   margin: 6px 10px;
+   transition: 0.4s;
+ }
+/*rotating the bars*/
+ .change .bar1 {
+   transform: translate(0, 11px) rotate(-45deg);
+}
+.change .bar2 {
+   opacity: 0;
+}
+.change .bar3 {
+   transform: translate(0, -11px) rotate(45deg);
+}
+/* Side navigation - hidden by default */
+.sidenav {
+   height: 100%; 
+   width: 0; 
+   position: fixed; 
+   z-index: 1001;
+   top: 0;
+   right: 0; 
+   background-color: #030b17; 
+   overflow-x: hidden; 
+   transition: 0.5s; 
+   padding-top: 60px; 
+}
+/* Side navigation links */
+.sidenav a {
+   padding: 8px 8px 8px 32px;
+   text-decoration: none;
+   font-size: 18px;
+   color: white;
+   display: block;
+   transition: 0.3s;
+}
+/*subscribe btn*/
+.sub-btn button{
+   background-color: rgb(252, 250, 129);
+   color: orange;
+   padding: 5px 5px;
+   border: none;
+   border-radius: 50px;
+   cursor: pointer;
+   font-size: 14px;
+   opacity: 0.9;
+   position: absolute;
+   z-index: 1000;
+   top:70px;
+   left: 10px;
+}
+/*login*/
+.login-link {
+   color: #fff;
+   opacity: 0.9;
+   text-transform: uppercase;
+   font-size: 15px;
+   font-weight: 700;
+   text-decoration: none;
+}
+/*banner-carousel*/
+.carousel-container {
+   position: relative;
+   width: 100%;
+   height: 450px;
+   padding: 20px 0;
+   overflow-x: hidden;
+   margin-top: 80px;
+}
+/*carousel*/
+.carousel {
+   display: flex;
+   width: 92%;
+   height: 100%;
+   position: relative;
+   margin: auto;
+}
+/*slider*/
+.slider {
+   flex: 0 0 auto;
+   margin-right: 30px;
+   position: relative;
+   background: rgba(0, 0, 0, 0.5);
+   border-radius: 5px;
+   width: 100%;
+   height: 100%;
+   left: 0;
+   transition: 1s;
+   overflow: hidden;
+}
+
+.slider img {
+   width: 70%;
+   min-height: 100%;
+   object-fit: cover;
+   display: block;
+   margin-left: auto;
+}
+
+.slide-content {
+   position: absolute;
+   width: 50%;
+   height: 100%;
+   z-index: 2;
+   background: linear-gradient(to right, #030b17 80%, #0c111b00);
+   color: #fff;
+}
+/*movie-content on banner*/
+.movie-title {
+   padding-left: 50px;
+   text-transform: capitalize;
+   margin-top: 80px;
+}
+/*movie-description*/
+.movie-des {
+   width: 80%;
+   line-height: 30px;
+   padding-left: 50px;
+   margin-top: 30px;
+   opacity: 0.8;
+}
+/*video-cards*/
+.video-card-container {
+   position: relative;
+   width: 92%;
+   margin: auto;
+   height: 10vw;
+   display: flex;
+   margin-bottom: 20px;
+   justify-content: space-between;
+}
+/*video-card*/
+.video-card {
+   position: relative;
+   min-width: calc(100%/5 - 10px);
+   width: calc(100%/5 - 10px);
+   height: 100%;
+   border-radius: 5px;
+   overflow: hidden;
+   background: #030b17;
+}
+/*videocard-images & videos*/
+.video-card-image,
+.card-video {
+   width: 100%;
+   height: 100%;
+   object-fit: fill;
+}
+.card-video {
+   position: relative;
+}
+/*while hovered on video-cards*/
+.video-card:hover .video-card-image {
+   display: none;
+   transform: scale(1.1);
+}
+/*title*/
+.title {
+   color: #fff;
+   opacity: 0.9;
+   padding-left: 4%;
+   text-transform: capitalize;
+   font-size: 22px;
+   font-weight: 500;
+}
+/*movies-list*/
+.movies-list {
+   width: 100%;
+   height: 220px;
+   position: relative;
+   margin: 10px 0 20px;
+}
+/*movie-cards*/
+.card-container {
+   position: absolute;
+   width: 96%;
+   padding-left: 4%;
+   height: 220PX;
+   display: flex;
+   margin: 0 auto;
+   align-items: center;
+   overflow-x: auto;
+   overflow-y: visible;
+   scroll-behavior: smooth;
+}
+.card-container::-webkit-scrollbar {
+   display: none;
+}
+/*movie-cards*/
+.card {
+   position: relative;
+   min-width: 150px;
+   width: 150px;
+   height: 200px;
+   border-radius: 5px;
+   overflow: hidden;
+   margin-left: 10px;
+   transition: .5s;
+   background: #000;
+}
+.card:hover {
+   transform: scale(1.1);
+}
+.card:hover .card-body {
+   opacity: 1;
+}
+.card-img {
+   width: 100%;
+   height: 100%;
+   object-fit: contain;
+}
+.card-body {
+   opacity: 0;
+   width: 100%;
+   height: 100%;
+   position: absolute;
+   top: 0;
+   left: 0;
+   z-index: 2;
+   background: linear-gradient(to bottom, rgba(4, 8, 15, 0), #192133 90%);
+   padding: 10px;
+   transition: 0.5s;
+}
+/*movie names*/
+.name {
+   color: #fff;
+   font-size: 15px;
+   font-weight: 500;
+   text-transform: capitalize;
+   margin-top: 60%;
+}
+/*movie description on cards*/
+.des {
+   color: #fff;
+   opacity: 0.8;
+   margin: 5px 0;
+   font-weight: 500;
+   font-size: 12px;
+}
+/*watchnow-btn*/
+.watchlist-btn {
+   position: relative;
+   width: 100%;
+   text-transform: capitalize;
+   background: none;
+   border: none;
+   font-weight: 500;
+   text-align: right;
+   color: rgba(255, 255, 255, 0.5);
+   margin: 5px 0;
+   cursor: pointer;
+   padding: 10px 5px;
+   border-radius: 5px;
+}
+.watchlist-btn::before {
+   content: '';
+   position: absolute;
+   top: 0;
+   left: -5px;
+   height: 35px;
+   width: 35px;
+   background-image: url(images/add.png);
+   background-size: cover;
+   transform: scale(0.4);
+}
+.watchlist-btn:hover {
+   color: #fff;
+   background: rgba(255, 255, 255, 0.1);
+}
+/*pre-btn,nxt-btn*/
+.pre-btn,
+.nxt-btn {
+   position: absolute;
+   top: 0;
+   width: 5%;
+   height: 100%;
+   z-index: 2;
+   border: none;
+   cursor: pointer;
+   outline: none;
+}
+.pre-btn {
+   left: 0;
+   background: linear-gradient(to right, #0c111b 0%, #0c111b00);
+}
+.nxt-btn {
+   right: 0;
+   background: linear-gradient(to left, #0c111b 0%, #0c111b00);
+}
+.pre-btn img,
+.nxt-btn img {
+   width: 15px;
+   height: 20px;
+   opacity: 0;
+}
+.pre-btn:hover img,
+.nxt-btn:hover img {
+   opacity: 1;
+}
+/* Footer Section */
+.footer {
+   background-color: #0c111b;
+   color: #fff;
+   padding: 40px 0;
+   width: 100%;
+   position: relative;
+   bottom: 0;
+   left: 0;
+}
+/*footer-aboutus*/
+.footer-content {
+   width: 90%;
+   max-width: 1200px;
+   margin: auto;
+   display: flex;
+   justify-content: space-between;
+   align-items: flex-start;
+   flex-wrap: wrap;
+}
+
+.footer-section {
+   flex: 1;
+   margin: 20px;
+}
+/*footer-headings*/
+.footer-section h2 {
+   font-size: 18px;
+   margin-bottom: 15px;
+   font-weight: 700;
+   text-transform: uppercase;
+}
+/*footer-paragraphs & lists*/
+.footer-section p,
+.footer-section ul {
+   font-size: 14px;
+   line-height: 1.6;
+   color: #aaa;
+}
+/*footer-list links*/
+.footer-section ul {
+   list-style-type: none;
+   padding: 0;
+}
+.footer-section ul li {
+   margin-bottom: 10px;
+}
+.footer-section ul li a {
+   color: #aaa;
+   text-decoration: none;
+   transition: color 0.3s;
+}
+.footer-section ul li a:hover {
+   color: #1f80e0;
+}
+.footer-section.social .social-icons {
+   display: flex;
+   align-items: center;
+}
+.footer-section.social .social-icons a {
+   margin-right: 15px;
+   display: inline-block;
+   width: 30px;
+   height: 30px;
+}
+.footer-section.social .social-icons img {
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+}
+.footer-section.social .social-icons img:hover {
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+   transform: 1.1;
+}
+.footer-bottom {
+   text-align: center;
+   padding: 20px 0;
+   border-top: 1px solid #1f80e0;
+   margin-top: 20px;
+}
+
+.footer-bottom p {
+   font-size: 14px;
+   color: #aaa;
+}
+/*Media queries-Responsive design*/
+/* Mobile screens (up to 600px) */
+@media (max-width: 600px) {
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+  }
+  .brand-logo {
+    height: 50px; 
+  }
+  .nav-links {
+    display: none; 
+  }
+  .sub-btn button {
+    padding: 5px 10px; 
+    font-size: 14px;
+  }
+  .carousel-container {
+    height: 300px; 
+  }
+  .video-card-container {
+    flex-direction: row;
+    height: auto;
+    gap: 10px;
+  }
+  .video-card {
+    width: 90%;
+    height: auto; 
+  }
+  .card-container {
+    overflow-x: scroll;
+    width: 100%;
+  }
+  .card {
+    width: 120px; /* Smaller movie cards */
+  }
+  .footer-content {
+    flex-direction: column;
+  }
+  .container {
+   right: 10px;
+   }
+   .right-container, .container {
+      display: inline-block;
+      position: absolute;
+      top: 20px;
+  }
+  .right-container {
+   right: 70px;
+   top:30px;
+   position: absolute;
+}
+}
+
+/* Tablets (600px - 1024px) */
+@media (min-width: 600px) and (max-width: 1024px) {
+  .navbar {
+    padding: 0 2%;
+  }
+  .brand-logo {
+    height: 60px;
+  }
+  .nav-links {
+    padding: 10px 15px;
+  }
+  .carousel-container {
+    height: 400px;
+  }
+  .video-card-container {
+   gap: 10px;
+    flex-direction: row;
+  }
+  .video-card {
+    width: 45%;
+    height: auto; 
+  } 
+   .card {
+    width: 140px;
+  }
+  .right-container {
+   right: 100px; 
+  }
+  .container {
+   right: 10px; 
+  }
+}
+
+/* Laptops (1024px - 1440px) */
+@media (min-width: 1024px) and (max-width: 1440px) {
+  .navbar {
+    padding: 0 3%;
+  }
+  .carousel-container {
+    height: 450px;
+  }
+  .video-card-container {
+    height: 15vw;
+  }
+  .card {
+    width: 150px;
+  }
+  .right-container{
+   position: absolute;
+   right:120px;
+  }
+  .container {
+   right: 10px; 
+}
+}
+
+/* Desktops (1440px and above) */
+@media (min-width: 1440px) {
+  .navbar {
+    padding: 0 4%;
+  }
+  .carousel-container {
+    height: 500px;
+  }
+  .video-card-container {
+    height: 10vw;
+  }
+  .card {
+    width: 170px;
+  }
+  .container {
+   right: 10px; /* Hamburger icon stays at the right */
+  }
+}
