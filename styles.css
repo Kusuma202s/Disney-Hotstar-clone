@@ -81,15 +81,7 @@ body {
    transition: 0.4s;
  }
 /*rotating the bars*/
- .change .bar1 {
-   transform: translate(0, 11px) rotate(-45deg);
-}
-.change .bar2 {
-   opacity: 0;
-}
-.change .bar3 {
-   transform: translate(0, -11px) rotate(45deg);
-}
+ 
 /* Side navigation - hidden by default */
 .sidenav {
    height: 100%; 
